@@ -6,7 +6,11 @@ const ProductTable = (props) => {
   const rows = [];
   let lastCategory = null;
 
-  props.products.forEach((product) => {
+  const filteredProducts = props.products.filter((product) =>
+    product.name.toLowerCase().includes(props.filterText.toLowerCase())
+  );
+
+  filteredProducts.forEach((product) => {
     if (product.category !== lastCategory) {
       rows.push(<ProductCategoryRow category={product.category} key={[product.category]} />);
     }
