@@ -9,7 +9,12 @@ const FilterableProductTable = (props) => {
 
   return (
     <div className='FilterableProductTable'>
-      <SearchBar filterText={filterText} inStockOnly={inStockOnly} setFilterText={setFilterText} />
+      <SearchBar
+        filterText={filterText}
+        inStockOnly={inStockOnly}
+        setInStockOnly={setInStockOnly}
+        setFilterText={setFilterText}
+      />
       <ProductTable
         products={props.products}
         filterText={filterText}
