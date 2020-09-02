@@ -6,7 +6,17 @@ const ProductTable = (props) => {
   const rows = [];
   let lastCategory = null;
 
+  // const filteredProducts = props.products.filter((product) =>
+  //   product.name.toLowerCase().includes(props.filterText.toLowerCase())
+  // );
+
   props.products.forEach((product) => {
+    if (!product.name.toLowerCase().includes(props.filterText.toLowerCase())) {
+      return;
+    }
+    if (props.inStockOnly && !product.stocked) {
+      return;
+    }
     if (product.category !== lastCategory) {
       rows.push(<ProductCategoryRow category={product.category} key={[product.category]} />);
     }
