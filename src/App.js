@@ -4,7 +4,7 @@ import products from './products';
 
 function App() {
   return (
-    <div className='App'>
+    <div className='container mx-auto'>
       <FilterableProductTable products={products} />
     </div>
   );

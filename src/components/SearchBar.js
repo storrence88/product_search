@@ -5,6 +5,7 @@ const SearchBar = (props) => {
     <form>
       <input
         type='text'
+        className='w-full'
         placeholder='Search...'
         value={props.filterText}
         onChange={(event) => props.setFilterText(event.target.value)}
