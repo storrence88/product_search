@@ -10,8 +10,8 @@ const ProductRow = (props) => {
 
   return (
     <tr>
-      <td>{name}</td>
-      <td>{price}</td>
+      <td className='border px-4 py-2'>{name}</td>
+      <td className='border px-4 py-2'>{price}</td>
     </tr>
   );
 };
