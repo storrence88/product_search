@@ -2,16 +2,20 @@ import React from 'react';
 
 const SearchBar = (props) => {
   return (
-    <form>
+    <form className>
       <input
         type='text'
-        className='w-full'
+        className='w-full px-2'
         placeholder='Search...'
         value={props.filterText}
         onChange={(event) => props.setFilterText(event.target.value)}
       />
       <p>
-        <input type='checkbox' onChange={() => props.setInStockOnly(!props.inStockOnly)} />
+        <input
+          type='checkbox'
+          className='m-2'
+          onChange={() => props.setInStockOnly(!props.inStockOnly)}
+        />
         Only show products in stock
       </p>
     </form>

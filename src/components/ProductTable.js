@@ -21,11 +21,11 @@ const ProductTable = (props) => {
   });
 
   return (
-    <table>
+    <table className='table-fixed border-separate mx-auto'>
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Price</th>
+          <th className='px-4 py-2'>Name</th>
+          <th className='px-4 py-2'>Price</th>
         </tr>
       </thead>
       <tbody>{rows}</tbody>
