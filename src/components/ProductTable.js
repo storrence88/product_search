@@ -6,10 +6,6 @@ const ProductTable = (props) => {
   const rows = [];
   let lastCategory = null;
 
-  // const filteredProducts = props.products.filter((product) =>
-  //   product.name.toLowerCase().includes(props.filterText.toLowerCase())
-  // );
-
   props.products.forEach((product) => {
     if (!product.name.toLowerCase().includes(props.filterText.toLowerCase())) {
       return;
